@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { MatDialog } from '@angular/material/dialog';
+import { LanguageDialogComponent } from '../../shared/language-dialog/language-dialog.component';
 
 @Component({
   selector: 'app-header',
@@ -7,11 +9,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HeaderComponent implements OnInit {
 
-  constructor() { }
+  constructor(public dialog: MatDialog) { }
 
-  ngOnInit(): void {
+  public ngOnInit(): void {
+
   }
 
-  public onToggleSidenav = () => {
+  public openLanguageDialog(): void {
+    this.dialog.open(LanguageDialogComponent, { panelClass: 'lang-window' });
   }
 }

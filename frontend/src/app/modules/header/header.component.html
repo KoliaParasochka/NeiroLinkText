@@ -1,19 +1,19 @@
 <mat-toolbar color="primary">
   <div>
-    <button mat-icon-button (click)="onToggleSidenav()">
-      <mat-icon>menu</mat-icon>
+    <button mat-icon-button (click)="openLanguageDialog()">
+      <mat-icon>language</mat-icon>
     </button>
   </div>
   <div class="home-link">
-    <a routerLink="/home">Home</a>
+    <a routerLink="/home">{{'HomePageBtn' | translate}}</a>
   </div>
   <div class="buttons-section">
     <ul class="navigation-items">
       <li>
-        <a routerLink="/owner">Teach neirolink</a>
+        <a routerLink="/owner">{{'AddNewSymbolsBtn' | translate}}</a>
       </li>
       <li>
-        <a routerLink="/account">About</a>
+        <a routerLink="/account">{{'RecognizeTextBtn' | translate}}</a>
       </li>
     </ul>
   </div>
