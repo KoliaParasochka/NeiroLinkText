@@ -7,7 +7,7 @@ import { TranslateService } from '@ngx-translate/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'frontend';
+  title = '';
 
   constructor(private translateService: TranslateService) {
     translateService.setDefaultLang('en');

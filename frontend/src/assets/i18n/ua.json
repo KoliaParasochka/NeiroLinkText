@@ -9,5 +9,7 @@
   "AddBtn": "Добавити",
   "AppFooterTitle": "Всі права захищені",
   "AppCreator": "Парасочка Микола",
-  "ClearCanvasTooltip": "Очстити малюнок"
+  "ClearCanvasTooltip": "Очстити малюнок",
+  "ClearBtnTooltip": "Очистити",
+  "AddFileBtn": "Завантажити файл"
 }
