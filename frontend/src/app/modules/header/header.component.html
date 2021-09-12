@@ -1,11 +1,13 @@
 <mat-toolbar color="primary">
   <div>
-    <button mat-icon-button (click)="openLanguageDialog()">
+    <button mat-icon-button
+            matTooltip="{{'LanguageTooltip' | translate}}"
+            (click)="openLanguageDialog()">
       <mat-icon>language</mat-icon>
     </button>
   </div>
   <div class="home-link">
-    <a routerLink="/home">{{'HomePageBtn' | translate}}</a>
+    <a routerLink="" matTooltip="{{'HomePageBtn' | translate}}">NeiroNet</a>
   </div>
   <div class="buttons-section">
     <ul class="navigation-items">

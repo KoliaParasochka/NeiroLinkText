@@ -1,0 +1,27 @@
+footer {
+  box-shadow: 0 0 5px rgba(0,0,0,0.25);
+  height: 106px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.author {
+  border: none;
+  background: white;
+  color: #333; /*#60b7c0;*/
+  font-size: 0.7em;
+  text-decoration: underline;
+}
+
+.text-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  span {
+    line-height: 24px;
+    color: #3f51b5;
+  }
+}

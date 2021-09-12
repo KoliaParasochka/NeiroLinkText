@@ -4,5 +4,8 @@
   "HomePageBtn": "Home",
   "RecognizeTextBtn": "Recognize text",
   "AddSymbolDrawerTitle": "Add new symbol",
-  "NewValueLabel": "New value"
+  "NewValueLabel": "New value",
+  "LanguageTooltip": "Language",
+  "AddBtn": "Add",
+  "AppFooterTitle": "All rights are protected"
 }

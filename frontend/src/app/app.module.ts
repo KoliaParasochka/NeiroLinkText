@@ -22,6 +22,7 @@ import { MatDialogModule } from '@angular/material/dialog';
 import { MatSelectModule } from '@angular/material/select';
 import { MatInputModule } from '@angular/material/input';
 import { MatTooltipModule } from '@angular/material/tooltip';
+import { FooterComponent } from './modules/footer/footer.component';
 
 export function createTranslateLoader(http: HttpClient) {
   return new TranslateHttpLoader(http, './assets/i18n/', '.json');
@@ -33,7 +34,8 @@ export function createTranslateLoader(http: HttpClient) {
     HomeComponent,
     HeaderComponent,
     LanguageDialogComponent,
-    AddSymbolsComponent
+    AddSymbolsComponent,
+    FooterComponent
   ],
   imports: [
     FormsModule,

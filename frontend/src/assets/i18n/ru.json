@@ -4,5 +4,8 @@
   "HomePageBtn": "Главная страница",
   "RecognizeTextBtn": "Распознать текст",
   "AddSymbolDrawerTitle": "Добавьте новый символ",
-  "NewValueLabel": "Новое значение"
+  "NewValueLabel": "Новое значение",
+  "LanguageTooltip": "Язык",
+  "AddBtn": "Добавить",
+  "AppFooterTitle": "Все права защищены"
 }
