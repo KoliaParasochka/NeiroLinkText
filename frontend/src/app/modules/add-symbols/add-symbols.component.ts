@@ -72,7 +72,14 @@ export function initCanvas() {
     mouse.lastY = mouse.y;
   }
 
+  function clear() {
+    ctx.clearRect(0, 0, 400, 400);
+  }
+
   canvas.addEventListener('mousedown', startPosition);
   canvas.addEventListener('mouseup', finishPosition);
   canvas.addEventListener('mousemove', draw);
+
+  const clearBtn: HTMLButtonElement = document.getElementById('clearBtn') as HTMLButtonElement;
+  clearBtn.addEventListener('click', clear);
 }

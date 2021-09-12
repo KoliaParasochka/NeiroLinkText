@@ -7,5 +7,7 @@
   "NewValueLabel": "New value",
   "LanguageTooltip": "Language",
   "AddBtn": "Add",
-  "AppFooterTitle": "All rights are protected"
+  "AppFooterTitle": "All rights are protected",
+  "AppCreator": "Parasochka Nickolay",
+  "ClearCanvasTooltip": "Clear picture"
 }

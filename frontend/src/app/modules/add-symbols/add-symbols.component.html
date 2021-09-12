@@ -1,7 +1,17 @@
 <div class="add-symbol-content">
   <div class="train-symbol-section">
     <div class="draw-section">
-      <h4>{{'AddSymbolDrawerTitle' | translate}}</h4>
+      <div class="drawer-menu">
+        <span class="drawer-title">{{'AddSymbolDrawerTitle' | translate}}</span>
+        <button mat-icon-button
+                id="clearBtn"
+                class="clear-canvas-btn"
+                matTooltip="{{'ClearCanvasTooltip' | translate}}"
+                [matTooltipPosition]="'after'">
+          <mat-icon>delete</mat-icon>
+        </button>
+      </div>
+
       <canvas id="drawer"></canvas>
     </div>
     <div class="forms-section">

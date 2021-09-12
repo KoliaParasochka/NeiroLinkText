@@ -7,5 +7,7 @@
   "NewValueLabel": "Новое значение",
   "LanguageTooltip": "Язык",
   "AddBtn": "Добавить",
-  "AppFooterTitle": "Все права защищены"
+  "AppFooterTitle": "Все права защищены",
+  "AppCreator": "Парасочка Николай",
+  "ClearCanvasTooltip": "Очистить рисунок"
 }
