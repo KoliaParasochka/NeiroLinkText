@@ -2,5 +2,7 @@
   "LanguageDialogTitle": "Мова інтерфейсу",
   "AddNewSymbolsBtn": "Додати символи",
   "HomePageBtn": "Головна сторінка",
-  "RecognizeTextBtn": "Розпізнати текст"
+  "RecognizeTextBtn": "Розпізнати текст",
+  "AddSymbolDrawerTitle": "Додайте новий символ",
+  "NewValueLabel": "Нове значення"
 }

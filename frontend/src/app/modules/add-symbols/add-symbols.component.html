@@ -1,0 +1,17 @@
+<div class="add-symbol-content">
+  <div class="train-symbol-section">
+    <div class="draw-section">
+      <h4>{{'AddSymbolDrawerTitle' | translate}}</h4>
+      <canvas id="drawer"></canvas>
+    </div>
+    <div class="forms-section">
+      <mat-form-field class="add-value-form-field" appearance="fill">
+        <mat-label>{{'NewValueLabel' | translate}}</mat-label>
+        <input matInput type="text" [(ngModel)]="newValue">
+        <button *ngIf="newValue" matSuffix mat-icon-button (click)="newValue=''">
+          <mat-icon>close</mat-icon>
+        </button>
+      </mat-form-field>
+    </div>
+  </div>
+</div>

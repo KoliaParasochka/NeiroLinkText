@@ -2,5 +2,7 @@
   "LanguageDialogTitle": "Interface language",
   "AddNewSymbolsBtn": "Add symbols",
   "HomePageBtn": "Home",
-  "RecognizeTextBtn": "Recognize text"
+  "RecognizeTextBtn": "Recognize text",
+  "AddSymbolDrawerTitle": "Add new symbol",
+  "NewValueLabel": "New value"
 }

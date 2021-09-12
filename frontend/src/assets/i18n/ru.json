@@ -2,5 +2,7 @@
   "LanguageDialogTitle": "Язык интерфейса",
   "AddNewSymbolsBtn": "Добавить символы",
   "HomePageBtn": "Главная страница",
-  "RecognizeTextBtn": "Распознать текст"
+  "RecognizeTextBtn": "Распознать текст",
+  "AddSymbolDrawerTitle": "Добавьте новый символ",
+  "NewValueLabel": "Новое значение"
 }
