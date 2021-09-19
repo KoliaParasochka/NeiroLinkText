@@ -1,0 +1,14 @@
+<div class="select-file-dialog-content">
+  <span class="upload-file-title">Upload image</span>
+  <div class="upload-file-section" (click)="fileInput.click()">
+    <button mat-icon-button class="select-file-btn">
+      <mat-icon>attach_file</mat-icon>
+    </button>
+    <span>{{selectedFileName}}</span>
+    <input #fileInput type="file" hidden (change)="onFileSelected($event)">
+  </div>
+  <div class="validation-error">
+    <span *ngIf="hasExtentionError">File should have extention like .jpg, .jpeg, .png</span>
+  </div>
+  <button mat-raised-button color="primary" (click)="onUploadImgBtnClick()">Upload file</button>
+</div>

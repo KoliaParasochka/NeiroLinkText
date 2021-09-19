@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { MatDialog } from '@angular/material/dialog';
+import { SelectFileDialogComponent } from '../../shared/select-file-dialog/select-file-dialog.component';
+import { WriteSymbolDialogComponent } from '../../shared/write-symbol-dialog/write-symbol-dialog.component';
 
 @Component({
   selector: 'app-home',
@@ -7,7 +10,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
 
-  constructor() { }
+  constructor(private dialog: MatDialog) { }
 
   public ngOnInit(): void {
     homeAnimation();
@@ -15,6 +18,16 @@ export class HomeComponent implements OnInit {
 
   public handleFileInput(event) {
 
+  }
+
+  public onUploadImgBtnClick(): void {
+    this.dialog.open(SelectFileDialogComponent, {
+      panelClass: 'upload-file-custom'
+    });
+  }
+
+  public onWriteSymbolBtnClick(): void {
+    this.dialog.open(WriteSymbolDialogComponent);
   }
 }
 

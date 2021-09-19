@@ -23,6 +23,8 @@ import { MatSelectModule } from '@angular/material/select';
 import { MatInputModule } from '@angular/material/input';
 import { MatTooltipModule } from '@angular/material/tooltip';
 import { FooterComponent } from './modules/footer/footer.component';
+import { SelectFileDialogComponent } from './shared/select-file-dialog/select-file-dialog.component';
+import { WriteSymbolDialogComponent } from './shared/write-symbol-dialog/write-symbol-dialog.component';
 
 export function createTranslateLoader(http: HttpClient) {
   return new TranslateHttpLoader(http, './assets/i18n/', '.json');
@@ -35,7 +37,9 @@ export function createTranslateLoader(http: HttpClient) {
     HeaderComponent,
     LanguageDialogComponent,
     AddSymbolsComponent,
-    FooterComponent
+    FooterComponent,
+    SelectFileDialogComponent,
+    WriteSymbolDialogComponent
   ],
   imports: [
     FormsModule,
