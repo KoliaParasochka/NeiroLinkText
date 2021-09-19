@@ -28,11 +28,13 @@ function homeAnimation() {
 
   let particles: Particle [] = [];
   let properties = {
-    backgroundColor: '#333',
-    particleColor: 'white',
+    backgroundColor: 'white',
+    particleColor: '#3f51b5',
     particleRadius: 3,
-    particleCount: 60,
-    particleMaxVeliocity: 0.5
+    particleCount: 30,
+    particleMaxVeliocity: 0.5,
+    lineLength: 150,
+    particleLife: 6
   };
 
   class Particle {
@@ -40,13 +42,10 @@ function homeAnimation() {
     y;
     veliocityX;
     veliocityY;
+    life;
 
     constructor() {
-      this.x = Math.random() * width;
-      this.y = Math.random() * height;
-
-      this.veliocityX = Math.random() * (properties.particleMaxVeliocity * 2) - properties.particleMaxVeliocity;
-      this.veliocityY = Math.random() * (properties.particleMaxVeliocity * 2) - properties.particleMaxVeliocity;
+      this.initParticle();
     }
 
     position() {
@@ -69,10 +68,29 @@ function homeAnimation() {
       ctx.fillStyle = properties.particleColor;
       ctx.fill();
     }
+
+    reCalculateLife() {
+      if (this.life < 1) {
+        this.initParticle();
+      }
+
+      this.life--;
+    }
+
+    initParticle() {
+      this.x = Math.random() * width;
+      this.y = Math.random() * height;
+
+      this.veliocityX = Math.random() * (properties.particleMaxVeliocity * 2) - properties.particleMaxVeliocity;
+      this.veliocityY = Math.random() * (properties.particleMaxVeliocity * 2) - properties.particleMaxVeliocity;
+
+      this.life = Math.random() * properties.particleLife * 90;
+    }
   }
 
-  function reDrawparticles() {
+  function reDrawParticles() {
     for (let i in particles) {
+      //particles[i].reCalculateLife();
       particles[i].position();
       particles[i].reDraw();
     }
@@ -99,14 +117,30 @@ function homeAnimation() {
         x2 = particles[j].x;
         y2 = particles[j].y;
 
-        length = Math.sqrt(Math.pow(x2 - x1, 1) + Math.pow(y2 - y1, 2));
+        length = Math.sqrt(Math.pow(x2 - x1, 2) + Math.pow(y2 - y1, 2));
+
+        if (length < properties.lineLength) {
+          opacity = 1 - length / properties.lineLength;
+
+          ctx.lineWidth = 0.5;
+          ctx.strokeStyle = 'rgb(63, 81, 181,' + opacity + '';
+
+          ctx.beginPath();
+
+          ctx.moveTo(x1, y1);
+          ctx.lineTo(x2, y2);
+
+          ctx.closePath();
+          ctx.stroke();
+        }
       }
     }
   }
 
   function loop() {
     reDrawBackground();
-    reDrawparticles();
+    reDrawParticles();
+    drawLines();
     requestAnimationFrame(loop);
   }
 
