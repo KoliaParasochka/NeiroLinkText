@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { initCanvas } from '../helpers/canvas-drawer';
 
 @Component({
   selector: 'app-write-symbol-dialog',
@@ -9,7 +10,11 @@ export class WriteSymbolDialogComponent implements OnInit {
 
   constructor() { }
 
-  ngOnInit(): void {
+  public ngOnInit(): void {
+    initCanvas();
   }
 
+  public onUploadImgBtnClick(): void {
+
+  }
 }

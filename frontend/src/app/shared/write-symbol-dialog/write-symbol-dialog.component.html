@@ -1,1 +1,16 @@
-<p>write-symbol-dialog works!</p>
+<div class="draw-section">
+  <div class="drawer-menu">
+    <span class="drawer-title">{{'RecognizeSymbolDrawerTitle' | translate}}</span>
+    <button mat-icon-button
+            id="clearBtn"
+            class="clear-canvas-btn"
+            matTooltip="{{'ClearCanvasTooltip' | translate}}"
+            [matTooltipPosition]="'after'">
+      <mat-icon>delete</mat-icon>
+    </button>
+  </div>
+
+  <canvas id="drawer"></canvas>
+
+  <button mat-raised-button class="upload-btn" color="primary" (click)="onUploadImgBtnClick()">Upload symbol</button>
+</div>
