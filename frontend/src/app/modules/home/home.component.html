@@ -1,44 +1,82 @@
-<div class="add-symbol-content">
-  <div class="train-symbol-section">
-    <div class="form-group">
-      <input type="file"
-             #inputFile
-             hidden
-             id="file"
-             (change)="handleFileInput($event.target.files)">
-      <button mat-icon-button (click)="inputFile.click()">
-        <mat-icon>file_upload</mat-icon>
-        <span>{{'AddFileBtn' | translate}}</span>
-      </button>
+<div class="body-content">
+  <div class="home-content-section">
+    <p>
+      {{'MainTargetApplication' | translate}}
+    </p>
+    <p>
+      {{'AdditionalTargetApplication' | translate}}
+    </p>
+    <div class="buttons-section">
+      <button mat-raised-button color="primary">Upload picture</button>
+      <button mat-raised-button class="write-symbol-btn">Write symbol</button>
     </div>
     <!--<div class="draw-section">
-    <div class="drawer-menu">
-      <span class="drawer-title">{{'AddSymbolDrawerTitle' | translate}}</span>
-      <button mat-icon-button
-              id="clearBtn"
-              class="clear-canvas-btn"
-              matTooltip="{{'ClearCanvasTooltip' | translate}}"
-              [matTooltipPosition]="'after'">
-        <mat-icon>delete</mat-icon>
-      </button>
+      <div class="drawer-menu">
+        <span class="drawer-title">{{'AddSymbolDrawerTitle' | translate}}</span>
+        <button mat-icon-button
+                id="clearBtn"
+                class="clear-canvas-btn"
+                matTooltip="{{'ClearCanvasTooltip' | translate}}"
+                [matTooltipPosition]="'after'">
+          <mat-icon>delete</mat-icon>
+        </button>
+      </div>
+
+      <canvas id="drawer"></canvas>
     </div>
+    <div class="forms-section">
+      <mat-form-field class="add-value-form-field" appearance="fill">
+        <mat-label>{{'NewValueLabel' | translate}}</mat-label>
+        <input matInput type="text">
+        <button mat-icon-button
+                matSuffix
+                class="clear-input-btn"
+                matTooltip="{{'ClearBtnTooltip' | translate}}"
+                [matTooltipPosition]="'after'">
+          <mat-icon>close</mat-icon>
+        </button>
+      </mat-form-field>
 
-    <canvas id="drawer"></canvas>
-  </div>
-  <div class="forms-section">
-    <mat-form-field class="add-value-form-field" appearance="fill">
-      <mat-label>{{'NewValueLabel' | translate}}</mat-label>
-      <input matInput type="text">
-      <button mat-icon-button
-              matSuffix
-              class="clear-input-btn"
-              matTooltip="{{'ClearBtnTooltip' | translate}}"
-              [matTooltipPosition]="'after'">
-        <mat-icon>close</mat-icon>
-      </button>
-    </mat-form-field>
+      <button mat-raised-button>{{'AddBtn' | translate}}</button>
+      <div class="form-group">
+        <input type="file"
+               #inputFile
+               hidden
+               id="file"
+               (change)="handleFileInput($event.target.files)">
+        <button mat-raised-button (click)="inputFile.click()">
+          <span>{{'AddFileBtn' | translate}}</span>
+        </button>
+      </div>
+    </div>-->
+    <!--<div class="draw-section">
+      <div class="drawer-menu">
+        <span class="drawer-title">{{'AddSymbolDrawerTitle' | translate}}</span>
+        <button mat-icon-button
+                id="clearBtn"
+                class="clear-canvas-btn"
+                matTooltip="{{'ClearCanvasTooltip' | translate}}"
+                [matTooltipPosition]="'after'">
+          <mat-icon>delete</mat-icon>
+        </button>
+      </div>
 
-    <button mat-raised-button>{{'AddBtn' | translate}}</button>
-  </div>-->
+      <canvas id="drawer"></canvas>
+    </div>
+    <div class="forms-section">
+      <mat-form-field class="add-value-form-field" appearance="fill">
+        <mat-label>{{'NewValueLabel' | translate}}</mat-label>
+        <input matInput type="text">
+        <button mat-icon-button
+                matSuffix
+                class="clear-input-btn"
+                matTooltip="{{'ClearBtnTooltip' | translate}}"
+                [matTooltipPosition]="'after'">
+          <mat-icon>close</mat-icon>
+        </button>
+      </mat-form-field>
+
+      <button mat-raised-button>{{'AddBtn' | translate}}</button>
+    </div>-->
   </div>
 </div>

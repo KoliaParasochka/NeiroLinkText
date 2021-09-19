@@ -11,5 +11,7 @@
   "AppCreator": "Parasochka Nickolay",
   "ClearCanvasTooltip": "Clear picture",
   "ClearBtnTooltip": "Clear",
-  "AddFileBtn": "Upload file"
+  "AddFileBtn": "Upload file",
+  "MainTargetApplication": "This WEB appliation gives possibility to work with handwriting character recognition using neural network technologies. Please upload your image. If you want recognize a specific symbol use drawer to write and recognize it by neural netwok.",
+  "AdditionalTargetApplication": "You can also train the neural network for recognizing spesific symbols. Click 'Add symbols' link to train neural network recognizing specific symbols."
 }

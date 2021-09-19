@@ -2,31 +2,25 @@
   border: 1px solid silver;
 }
 
-.train-symbol-section {
-  padding: 0px 25px 25px 25px;
-  width: 672px;
+.home-content-section {
   display: flex;
-  background-color: white;
-}
+  flex-direction: column;
 
-.forms-section {
-  margin-left: 20px;
-  margin-top: 60px;
-  width: 250px;
-}
+  p {
+    margin: 0px;
+    text-indent: 20px;
+  }
 
-.add-symbol-content {
-  height: calc(100% - 40px);
-  padding-top: 20px;
-  padding-bottom: 20px;
-  background-color: #fafafa;
-  display: flex;
-  flex-direction: revert;
-  justify-content: center;
-}
+  .buttons-section {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
 
-.add-value-form-field {
-  width: 250px;
+    .write-symbol-btn {
+      margin-left: 20px;
+    }
+  }
 }
 
 .drawer-menu {
@@ -50,4 +44,18 @@
 
 .clear-input-btn {
   font-size: 14px;
+}
+
+.upload-file-btn {
+  width: 200px;
+  height: 60px;
+  border-radius: 10px;
+  font-size: 20px;
+}
+
+.upload-icon {
+  height: 60px;
+  width: 60px;
+  line-height: 60px;
+  font-size: 36px;
 }
