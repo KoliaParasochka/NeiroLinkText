@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using NeiroNetInterfaces.Interfaces;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,11 +12,11 @@ namespace NeiroLinkBackEnd.Controllers
     [ApiController]
     public class NeiroNetController : ControllerBase
     {
+        private readonly INeironService _neironService;
 
-
-        public NeiroNetController()
+        public NeiroNetController(INeironService neironService)
         {
-
+            _neironService = neironService;
         }
 
         [HttpPost("Recornize")]
