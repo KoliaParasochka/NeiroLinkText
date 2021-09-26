@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "yQogdxjTHA7tZAn4uV5lBk8YZrJaz8IaYRAmhlQB3PPG2CJoqLuIVwqqfp6HQ1EPEhNGXgW1EMDP8URl69nMpA==",
+  "dgSpecHash": "Qgzx8ZhqmpHtIHF5c1E2JT8gQ3w+KHfXctEVMpqV4VYSdDLbxFV13Kd93+cckjeurv/qVVMLCBR/32ndYcgMzg==",
   "success": true,
-  "projectFilePath": "D:\\New\\NeiroLinkProject\\NeiroLinkBackEnd\\NeiroLinkBackEnd\\NeiroLinkBackEnd.csproj",
+  "projectFilePath": "D:\\New\\NeiroLinkProject\\NeiroLinkBackEnd\\NeiroNetLogic\\NeiroNetLogic.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\User\\.nuget\\packages\\microsoft.csharp\\4.0.1\\microsoft.csharp.4.0.1.nupkg.sha512",
     "C:\\Users\\User\\.nuget\\packages\\microsoft.dotnet.platformabstractions\\2.0.4\\microsoft.dotnet.platformabstractions.2.0.4.nupkg.sha512",

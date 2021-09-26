@@ -1594,20 +1594,6 @@
         "runtime": {
           "bin/placeholder/NeiroNetInterfaces.dll": {}
         }
-      },
-      "NeiroNetLogic/1.0.0": {
-        "type": "project",
-        "framework": ".NETCoreApp,Version=v3.1",
-        "dependencies": {
-          "Nancy": "2.0.0",
-          "NeiroNetInterfaces": "1.0.0"
-        },
-        "compile": {
-          "bin/placeholder/NeiroNetLogic.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/NeiroNetLogic.dll": {}
-        }
       }
     }
   },
@@ -5684,17 +5670,12 @@
       "type": "project",
       "path": "../NeiroNetInterfaces/NeiroNetInterfaces.csproj",
       "msbuildProject": "../NeiroNetInterfaces/NeiroNetInterfaces.csproj"
-    },
-    "NeiroNetLogic/1.0.0": {
-      "type": "project",
-      "path": "../NeiroNetLogic/NeiroNetLogic.csproj",
-      "msbuildProject": "../NeiroNetLogic/NeiroNetLogic.csproj"
     }
   },
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v3.1": [
-      "NeiroNetInterfaces >= 1.0.0",
-      "NeiroNetLogic >= 1.0.0"
+      "Nancy >= 2.0.0",
+      "NeiroNetInterfaces >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -5704,11 +5685,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\New\\NeiroLinkProject\\NeiroLinkBackEnd\\NeiroLinkBackEnd\\NeiroLinkBackEnd.csproj",
-      "projectName": "NeiroLinkBackEnd",
-      "projectPath": "D:\\New\\NeiroLinkProject\\NeiroLinkBackEnd\\NeiroLinkBackEnd\\NeiroLinkBackEnd.csproj",
+      "projectUniqueName": "D:\\New\\NeiroLinkProject\\NeiroLinkBackEnd\\NeiroNetLogic\\NeiroNetLogic.csproj",
+      "projectName": "NeiroNetLogic",
+      "projectPath": "D:\\New\\NeiroLinkProject\\NeiroLinkBackEnd\\NeiroNetLogic\\NeiroNetLogic.csproj",
       "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
-      "outputPath": "D:\\New\\NeiroLinkProject\\NeiroLinkBackEnd\\NeiroLinkBackEnd\\obj\\",
+      "outputPath": "D:\\New\\NeiroLinkProject\\NeiroLinkBackEnd\\NeiroNetLogic\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
@@ -5731,9 +5712,6 @@
           "projectReferences": {
             "D:\\New\\NeiroLinkProject\\NeiroLinkBackEnd\\NeiroNetInterfaces\\NeiroNetInterfaces.csproj": {
               "projectPath": "D:\\New\\NeiroLinkProject\\NeiroLinkBackEnd\\NeiroNetInterfaces\\NeiroNetInterfaces.csproj"
-            },
-            "D:\\New\\NeiroLinkProject\\NeiroLinkBackEnd\\NeiroNetLogic\\NeiroNetLogic.csproj": {
-              "projectPath": "D:\\New\\NeiroLinkProject\\NeiroLinkBackEnd\\NeiroNetLogic\\NeiroNetLogic.csproj"
             }
           }
         }
@@ -5747,6 +5725,12 @@
     "frameworks": {
       "netcoreapp3.1": {
         "targetAlias": "netcoreapp3.1",
+        "dependencies": {
+          "Nancy": {
+            "target": "Package",
+            "version": "[2.0.0, )"
+          }
+        },
         "imports": [
           "net461",
           "net462",
@@ -5758,9 +5742,6 @@
         "assetTargetFallback": true,
         "warn": true,
         "frameworkReferences": {
-          "Microsoft.AspNetCore.App": {
-            "privateAssets": "none"
-          },
           "Microsoft.NETCore.App": {
             "privateAssets": "all"
           }

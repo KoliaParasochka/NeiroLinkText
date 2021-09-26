@@ -6,6 +6,8 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
+using NeiroNetInterfaces.Interfaces;
+using NeiroNetLogic.Services;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -26,6 +28,9 @@ namespace NeiroLinkBackEnd
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllers();
+
+            services.AddTransient<INeiron, Neiron>();
+            services.AddSingleton<INeironService, NeironService>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
