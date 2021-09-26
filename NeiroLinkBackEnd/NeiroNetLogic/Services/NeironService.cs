@@ -114,7 +114,12 @@ namespace NeiroNetLogic.Services
         public string[] GetLiteras()
         {
             var res = new List<string>();
-            for (int i = 0; i < neironArray.Count; i++) res.Add(neironArray[i].GetName());
+
+            for (int i = 0; i < neironArray.Count; i++)
+            {
+                res.Add(neironArray[i].GetName());
+            }
+
             res.Sort();
             return res.ToArray();
         }
@@ -124,15 +129,18 @@ namespace NeiroNetLogic.Services
         public string SetTraining(string trainingName, int[,] data)
         {
             Neiron neiron = neironArray.Find(v => v.name.Equals(trainingName));
+
             if (neiron == null) // если нейрона с таким именем не существует, создадим новыи и добавим
             {                   // его в массив нейронов
                 neiron = new Neiron();
                 neiron.Clear(trainingName, NEIRON_IN_ARRAY_WIDTH, NEIRON_IN_ARRAY_HEIGHT);
+
                 neironArray.Add(neiron);
             }
+
             int countTrainig = neiron.Training(data); // обучим нейрон новому образу
-            string messageStr = "Имя образа - " + neiron.GetName() +
-                                " вариантов образа в памяти - " + countTrainig.ToString();
+
+            string messageStr = $"Имя образа - {neiron.GetName()} вариантов образа в памяти - {countTrainig}";
 
             // покажем визуальное отображение памяти обученного нейрона
             //Form resultForm = new ShowMemoryVeight(neiron);

@@ -1,0 +1,12 @@
+D:\New\NeiroLinkProject\NeiroLinkBackEnd\NeiroNetLogic\bin\Debug\netcoreapp3.1\NeiroNetLogic.deps.json
+D:\New\NeiroLinkProject\NeiroLinkBackEnd\NeiroNetLogic\bin\Debug\netcoreapp3.1\NeiroNetLogic.dll
+D:\New\NeiroLinkProject\NeiroLinkBackEnd\NeiroNetLogic\bin\Debug\netcoreapp3.1\NeiroNetLogic.pdb
+D:\New\NeiroLinkProject\NeiroLinkBackEnd\NeiroNetLogic\bin\Debug\netcoreapp3.1\NeiroNetInterfaces.dll
+D:\New\NeiroLinkProject\NeiroLinkBackEnd\NeiroNetLogic\bin\Debug\netcoreapp3.1\NeiroNetInterfaces.pdb
+D:\New\NeiroLinkProject\NeiroLinkBackEnd\NeiroNetLogic\obj\Debug\netcoreapp3.1\NeiroNetLogic.csproj.AssemblyReference.cache
+D:\New\NeiroLinkProject\NeiroLinkBackEnd\NeiroNetLogic\obj\Debug\netcoreapp3.1\NeiroNetLogic.AssemblyInfoInputs.cache
+D:\New\NeiroLinkProject\NeiroLinkBackEnd\NeiroNetLogic\obj\Debug\netcoreapp3.1\NeiroNetLogic.AssemblyInfo.cs
+D:\New\NeiroLinkProject\NeiroLinkBackEnd\NeiroNetLogic\obj\Debug\netcoreapp3.1\NeiroNetLogic.csproj.CoreCompileInputs.cache
+D:\New\NeiroLinkProject\NeiroLinkBackEnd\NeiroNetLogic\obj\Debug\netcoreapp3.1\NeiroNetLogic.csproj.CopyComplete
+D:\New\NeiroLinkProject\NeiroLinkBackEnd\NeiroNetLogic\obj\Debug\netcoreapp3.1\NeiroNetLogic.dll
+D:\New\NeiroLinkProject\NeiroLinkBackEnd\NeiroNetLogic\obj\Debug\netcoreapp3.1\NeiroNetLogic.pdb

@@ -1,0 +1,9 @@
+D:\New\NeiroLinkProject\NeiroLinkBackEnd\NeiroNetInterfaces\bin\Debug\netcoreapp3.1\NeiroNetInterfaces.deps.json
+D:\New\NeiroLinkProject\NeiroLinkBackEnd\NeiroNetInterfaces\bin\Debug\netcoreapp3.1\NeiroNetInterfaces.dll
+D:\New\NeiroLinkProject\NeiroLinkBackEnd\NeiroNetInterfaces\bin\Debug\netcoreapp3.1\NeiroNetInterfaces.pdb
+D:\New\NeiroLinkProject\NeiroLinkBackEnd\NeiroNetInterfaces\obj\Debug\netcoreapp3.1\NeiroNetInterfaces.csproj.AssemblyReference.cache
+D:\New\NeiroLinkProject\NeiroLinkBackEnd\NeiroNetInterfaces\obj\Debug\netcoreapp3.1\NeiroNetInterfaces.AssemblyInfoInputs.cache
+D:\New\NeiroLinkProject\NeiroLinkBackEnd\NeiroNetInterfaces\obj\Debug\netcoreapp3.1\NeiroNetInterfaces.AssemblyInfo.cs
+D:\New\NeiroLinkProject\NeiroLinkBackEnd\NeiroNetInterfaces\obj\Debug\netcoreapp3.1\NeiroNetInterfaces.csproj.CoreCompileInputs.cache
+D:\New\NeiroLinkProject\NeiroLinkBackEnd\NeiroNetInterfaces\obj\Debug\netcoreapp3.1\NeiroNetInterfaces.dll
+D:\New\NeiroLinkProject\NeiroLinkBackEnd\NeiroNetInterfaces\obj\Debug\netcoreapp3.1\NeiroNetInterfaces.pdb
