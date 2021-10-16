@@ -12,5 +12,8 @@
 
   <canvas id="drawer"></canvas>
 
-  <button mat-raised-button class="upload-btn" color="primary" (click)="onUploadImgBtnClick()">Upload symbol</button>
+  <div class="buttons-section">
+    <button mat-button mat-raised-button class="cancel-btn" (click)="onCancelBtnClick()">{{'CancelBtn' | translate}}</button>
+    <button mat-button mat-raised-button class="upload-btn" color="primary" (click)="onUploadImgBtnClick()">{{'UploadSymbolBtn' | translate}}</button>
+  </div>
 </div>

@@ -10,8 +10,16 @@
       {{'AdditionalTargetApplication' | translate}}
     </p>
     <div class="buttons-section">
-      <button mat-raised-button color="primary" (click)="onUploadImgBtnClick()">{{'AddFileBtn' | translate}}</button>
-      <button mat-raised-button class="write-symbol-btn" (click)="onWriteSymbolBtnClick()">{{'WriteSymbol' | translate}}</button>
+      <button mat-button
+              mat-raised-button
+              onclick="this.blur()"
+              color="primary"
+              (click)="onUploadImgBtnClick()">{{'AddFileBtn' | translate}}</button>
+      <button mat-button
+              mat-raised-button
+              onclick="this.blur()"
+              class="write-symbol-btn"
+              (click)="onWriteSymbolBtnClick()">{{'WriteSymbol' | translate}}</button>
     </div>
   </div>
 </div>

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnDestroy, OnInit } from '@angular/core';
 import { Subscription } from 'rxjs';
 import { NeiroNetService } from '../../services/neiro-net.service';
 
@@ -7,7 +7,7 @@ import { NeiroNetService } from '../../services/neiro-net.service';
   templateUrl: './select-file-dialog.component.html',
   styleUrls: ['./select-file-dialog.component.scss']
 })
-export class SelectFileDialogComponent implements OnInit {
+export class SelectFileDialogComponent implements OnInit, OnDestroy {
 
   public selectedFileName: string = 'Select picture';
   public hasExtentionError: boolean = false;
@@ -18,6 +18,10 @@ export class SelectFileDialogComponent implements OnInit {
   constructor(private neiroNetService: NeiroNetService) { }
 
   public ngOnInit(): void { }
+
+  public ngOnDestroy(): void {
+    this.subs.forEach(x => x.unsubscribe());
+  }
 
   public onFileSelected(event): void {
     let file = event.target.files[0];

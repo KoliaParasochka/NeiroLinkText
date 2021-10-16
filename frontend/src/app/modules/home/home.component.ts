@@ -22,12 +22,13 @@ export class HomeComponent implements OnInit {
 
   public onUploadImgBtnClick(): void {
     this.dialog.open(SelectFileDialogComponent, {
-      panelClass: 'upload-file-custom'
+      panelClass: 'upload-file-custom',
+      disableClose: true
     });
   }
 
   public onWriteSymbolBtnClick(): void {
-    this.dialog.open(WriteSymbolDialogComponent);
+    this.dialog.open(WriteSymbolDialogComponent, { disableClose: true });
   }
 }
 

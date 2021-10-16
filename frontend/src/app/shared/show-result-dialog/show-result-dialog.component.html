@@ -1,0 +1,4 @@
+<div mat-dialog-content>
+  <span *ngIf="data.isRecognizing">{{'Result' | translate}}: {{data.result}}</span>
+  <span *ngIf="!data.isRecognizing">{{'SymbolWasLearnt' | translate}}</span>
+</div>

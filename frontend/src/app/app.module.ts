@@ -25,6 +25,7 @@ import { MatTooltipModule } from '@angular/material/tooltip';
 import { FooterComponent } from './modules/footer/footer.component';
 import { SelectFileDialogComponent } from './shared/select-file-dialog/select-file-dialog.component';
 import { WriteSymbolDialogComponent } from './shared/write-symbol-dialog/write-symbol-dialog.component';
+import { ShowResultDialogComponent } from './shared/show-result-dialog/show-result-dialog.component';
 
 export function createTranslateLoader(http: HttpClient) {
   return new TranslateHttpLoader(http, './assets/i18n/', '.json');
@@ -39,7 +40,8 @@ export function createTranslateLoader(http: HttpClient) {
     AddSymbolsComponent,
     FooterComponent,
     SelectFileDialogComponent,
-    WriteSymbolDialogComponent
+    WriteSymbolDialogComponent,
+    ShowResultDialogComponent
   ],
   imports: [
     FormsModule,

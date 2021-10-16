@@ -25,7 +25,14 @@
   border: 1px solid silver;
 }
 
-.upload-btn {
+.upload-btn,
+.cancel-btn {
   display: block;
   margin-top: 10px;
+}
+
+.buttons-section {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 }
