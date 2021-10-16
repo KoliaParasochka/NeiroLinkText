@@ -1,8 +1,11 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using NeiroLinkBackEnd.Helpers;
+using NeiroLinkBackEnd.Models.ApiParams;
 using NeiroNetInterfaces.Interfaces;
 using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.Linq;
 using System.Threading.Tasks;
 
@@ -20,15 +23,27 @@ namespace NeiroLinkBackEnd.Controllers
         }
 
         [HttpPost("Recornize")]
-        public IActionResult Recognize()
+        public IActionResult Recognize([FromBody] RecognizeTextModel model)
         {
-            return Ok();
+            int[,] data = GetDataFromBase64Image(model);
+            string result = _neironService.CheckLitera(data);
+
+            return Ok(new { result });
         }
 
         [HttpPost("Learn")]
-        public IActionResult Learn()
+        public IActionResult Learn([FromBody] LearnSymbolModel model)
         {
+            int[,] data = GetDataFromBase64Image(model);
+            _neironService.SetTraining(model.SymbolToLearn, data);
+
             return Ok();
+        }
+
+        private int[,] GetDataFromBase64Image(RecognizeTextModel model)
+        {
+            int[,] data = NeiroGraphUtils.CutImageToArray(model.Image, new Point(model.Width, model.Height));
+            return NeiroGraphUtils.LeadArray(data, new int[10, 10]);
         }
     }
 }

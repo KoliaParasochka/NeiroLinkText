@@ -1,6 +1,9 @@
 import { Component, OnInit } from '@angular/core';
+import { Subscription } from 'rxjs';
 import { NeiroNetService } from '../../services/neiro-net.service';
 import { initCanvas } from '../../shared/helpers/canvas-drawer';
+import { LearnSymolModel } from '../../shared/models/learn-symbol.model';
+import { RecognizeTextModel } from '../../shared/models/recognize-text.model';
 
 @Component({
   selector: 'app-add-symbols',
@@ -10,6 +13,7 @@ import { initCanvas } from '../../shared/helpers/canvas-drawer';
 export class AddSymbolsComponent implements OnInit {
 
   public newValue: string = '';
+  private subs: Subscription[] = [];
 
   constructor(private readonly neiroNetService: NeiroNetService) { }
 
@@ -18,10 +22,14 @@ export class AddSymbolsComponent implements OnInit {
   }
 
   public learnNewSymbol(): void {
-    this.neiroNetService.learnSymbol().subscribe(response => {
+    const canvas: HTMLCanvasElement = document.getElementById('drawer') as HTMLCanvasElement;
+    let image = canvas.toDataURL("image/png").replace("image/png", "image/octet-stream");
+    const arr = image.split(',');
+
+    const model: LearnSymolModel = new LearnSymolModel(this.newValue, arr[1]);
+
+    this.neiroNetService.learnSymbol(model).subscribe(response => {
       debugger;
     });
-
-    this.neiroNetService.recognizeText().subscribe();
   }
 }

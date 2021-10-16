@@ -1,5 +1,7 @@
-﻿using System.Drawing;
+﻿using System;
+using System.Drawing;
 using System.Drawing.Drawing2D;
+using System.IO;
 
 namespace NeiroLinkBackEnd.Helpers
 {
@@ -53,8 +55,10 @@ namespace NeiroLinkBackEnd.Helpers
         }
 
         // обрезать рисунок по краям и преобразовать в массив
-        public static int[,] CutImageToArray(Bitmap b, Point max)
+        public static int[,] CutImageToArray(string base64Image, Point max)
         {
+            Bitmap b = Base64StringToBitmap(base64Image);
+
             int x1 = 0;
             int y1 = 0;
             int x2 = max.X;
@@ -114,6 +118,22 @@ namespace NeiroLinkBackEnd.Helpers
                     if (res[posX, posY] == 0) res[posX, posY] = source[n, m];
                 }
             return res;
+        }
+
+        private static Bitmap Base64StringToBitmap(string base64String)
+        {
+            Bitmap bmpReturn = null;
+            byte[] byteBuffer = Convert.FromBase64String(base64String);
+
+            MemoryStream memoryStream = new MemoryStream(byteBuffer);
+            memoryStream.Position = 0;
+            bmpReturn = (Bitmap)Bitmap.FromStream(memoryStream);
+
+            memoryStream.Close();
+            memoryStream = null;
+            byteBuffer = null;
+
+            return bmpReturn;
         }
     }
 }

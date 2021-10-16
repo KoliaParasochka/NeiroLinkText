@@ -1,6 +1,8 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
+import { LearnSymolModel } from '../shared/models/learn-symbol.model';
+import { RecognizeTextModel } from '../shared/models/recognize-text.model';
 
 @Injectable({
   providedIn: 'root'
@@ -10,11 +12,11 @@ export class NeiroNetService {
 
   constructor(private readonly http: HttpClient) { }
 
-  public recognizeText(): Observable<any> {
-    return this.http.post(`${this.baseUrl}Recornize`, {});
+  public recognizeText(model: RecognizeTextModel): Observable<any> {
+    return this.http.post(`${this.baseUrl}Recornize`, model);
   }
 
-  public learnSymbol(): Observable<any> {
-    return this.http.post(`${this.baseUrl}Learn`, {});
+  public learnSymbol(model: LearnSymolModel): Observable<any> {
+    return this.http.post(`${this.baseUrl}Learn`, model);
   }
 }

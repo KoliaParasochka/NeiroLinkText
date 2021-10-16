@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Subscription } from 'rxjs';
+import { NeiroNetService } from '../../services/neiro-net.service';
 
 @Component({
   selector: 'app-select-file-dialog',
@@ -11,8 +13,9 @@ export class SelectFileDialogComponent implements OnInit {
   public hasExtentionError: boolean = false;
 
   private formData: FormData = new FormData();
+  private subs: Subscription[] = [];
 
-  constructor() { }
+  constructor(private neiroNetService: NeiroNetService) { }
 
   public ngOnInit(): void { }
 
@@ -32,6 +35,6 @@ export class SelectFileDialogComponent implements OnInit {
   }
 
   public onUploadImgBtnClick(): void {
-
+    //this.subs.push(this.neiroNetService.recognizeText())
   }
 }

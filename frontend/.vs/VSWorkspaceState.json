@@ -3,15 +3,14 @@
     "",
     "\\src",
     "\\src\\app",
-    "\\src\\app\\modules",
-    "\\src\\app\\modules\\add-symbols",
-    "\\src\\app\\modules\\home",
+    "\\src\\app\\services",
     "\\src\\app\\shared",
+    "\\src\\app\\shared\\models",
     "\\src\\app\\shared\\select-file-dialog",
     "\\src\\app\\shared\\write-symbol-dialog",
     "\\src\\assets",
     "\\src\\assets\\i18n"
   ],
-  "SelectedNode": "\\src\\app\\shared\\write-symbol-dialog\\write-symbol-dialog.component.html",
+  "SelectedNode": "\\src\\app\\shared\\write-symbol-dialog\\write-symbol-dialog.component.ts",
   "PreviewInSolutionExplorer": false
 }
