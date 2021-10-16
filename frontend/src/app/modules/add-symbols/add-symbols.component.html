@@ -28,7 +28,9 @@
           <mat-icon>close</mat-icon>
         </button>
       </mat-form-field>
-
+      <div>
+        <span *ngFor="let el of (symbolsInMemory$ | async)">{{el}}</span>
+      </div>
       <button mat-raised-button (click)="learnNewSymbol()">{{'AddBtn' | translate}}</button>
     </div>
   </div>

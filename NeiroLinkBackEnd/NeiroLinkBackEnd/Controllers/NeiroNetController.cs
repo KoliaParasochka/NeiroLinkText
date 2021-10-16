@@ -4,10 +4,7 @@ using NeiroLinkBackEnd.Helpers;
 using NeiroLinkBackEnd.Models.ApiParams;
 using NeiroNetInterfaces.Interfaces;
 using System;
-using System.Collections.Generic;
 using System.Drawing;
-using System.Linq;
-using System.Threading.Tasks;
 
 namespace NeiroLinkBackEnd.Controllers
 {
@@ -20,6 +17,14 @@ namespace NeiroLinkBackEnd.Controllers
         public NeiroNetController(INeironService neironService)
         {
             _neironService = neironService;
+        }
+
+        [HttpGet]
+        public IActionResult GetLiteras()
+        {
+            string[] literas = _neironService.GetLiteras();
+
+            return Ok(new { literas });
         }
 
         [HttpPost("Recornize")]
@@ -37,7 +42,7 @@ namespace NeiroLinkBackEnd.Controllers
             int[,] data = GetDataFromBase64Image(model);
             _neironService.SetTraining(model.SymbolToLearn, data);
 
-            return Ok();
+            return GetLiteras();
         }
 
         private int[,] GetDataFromBase64Image(RecognizeTextModel model)

@@ -1,6 +1,6 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
-import { Subscription } from 'rxjs';
+import { BehaviorSubject, Subscription } from 'rxjs';
 import { NeiroNetService } from '../../services/neiro-net.service';
 import { initCanvas } from '../../shared/helpers/canvas-drawer';
 import { LearnSymolModel } from '../../shared/models/learn-symbol.model';
@@ -15,6 +15,8 @@ import { ShowResultDialogComponent } from '../../shared/show-result-dialog/show-
 export class AddSymbolsComponent implements OnInit, OnDestroy {
 
   public newValue: string = '';
+  public symbolsInMemory$: BehaviorSubject<string[]> = new BehaviorSubject<string[]>([]);
+
   private subs: Subscription[] = [];
 
   constructor(private readonly neiroNetService: NeiroNetService,
@@ -22,6 +24,7 @@ export class AddSymbolsComponent implements OnInit, OnDestroy {
 
   public ngOnInit(): void {
     initCanvas();
+    this.initSymbolsFromMemory();
   }
 
   public ngOnDestroy(): void {
@@ -36,12 +39,19 @@ export class AddSymbolsComponent implements OnInit, OnDestroy {
     const model: LearnSymolModel = new LearnSymolModel(this.newValue, arr[1]);
 
     this.subs.push(this.neiroNetService.learnSymbol(model).subscribe(response => {
-      this.newValue = '';
+      this.symbolsInMemory$.next(response.literas)
+      
       this.dialog.open(ShowResultDialogComponent, {
-        width: '200px',
-        data: { isRecognizing: false },
+        width: '300px',
+        data: {  isRecognizing: false },
         panelClass: 'show-result-custom-window'
       });
+
+      this.newValue = '';
     }));
+  }
+
+  private initSymbolsFromMemory(): void {
+    this.subs.push(this.neiroNetService.getSymbols().subscribe(response => this.symbolsInMemory$.next(response.literas)))
   }
 }

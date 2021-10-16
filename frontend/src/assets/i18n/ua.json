@@ -20,5 +20,5 @@
   "UploadSymbolBtn": "Завантажити символ",
   "Result": "Результат",
   "SymbolWasLearnt": "Нейронна мережа вивчіла символ",
-  "CancelBtn": "Відмінити"
+  "FinishBtn": "Закінчити"
 }

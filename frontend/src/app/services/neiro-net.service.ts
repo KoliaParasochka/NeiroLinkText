@@ -19,4 +19,8 @@ export class NeiroNetService {
   public learnSymbol(model: LearnSymolModel): Observable<any> {
     return this.http.post(`${this.baseUrl}Learn`, model);
   }
+
+  public getSymbols(): Observable<any> {
+    return this.http.get<any>(`${this.baseUrl}`);
+  }
 }
